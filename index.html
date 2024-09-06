@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Day Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vacation Day Calculator for Jewish Holidays (2024-2025)</h1>
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date">
+
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date">
+
+        <div>
+            <input type="checkbox" id="work-fridays" name="workdays" onclick="uncheckOther('fridays')">
+            <label for="work-fridays">I work Fridays: </label>
+            
+            <input type="checkbox" id="work-sundays" name="workdays" onclick="uncheckOther('sundays')">
+            <label for="work-sundays">I work Sundays: </label>
+            
+        </div>
+
+        <button onclick="calculateVacationDays()">Calculate Vacation Days</button>
+
+        <div id="result"></div>
+        <div id="holiday-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
